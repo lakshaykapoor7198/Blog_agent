@@ -1,0 +1,27 @@
+<% include partials/header %>
+<% include partials/navbar %>
+<br><br><br><br>
+<br>
+
+<%- messages()%>
+<%if(posts){%>
+		<%posts.forEach(function(post){%>
+			<div class='posts'>
+			<h1><a class='post-title'  href="/posts/show/<%=post._id%>"><b><u><%=post.title%></u></b></a><h1>
+			<div>in <i><%=post.category%></i> by <i><%=post.author%></i> on 
+				<i><%=moment(post.date).format('hh:mm:ss')%></i> </div>
+			<hr>
+			<img class='post-image' src='/images/uploads/<%=post.mainimage%>'>
+			<p class='post-body'><%-truncateText(post.body,400)%></p>
+			<a class='more' href="/posts/show/<%=post._id%>">Read More&nbsp;&nbsp;&gt;&gt;</a>
+			</div>
+		<%});%>
+<%}%>
+
+<%if (title=='Blog'){%>
+	<script type="text/javascript">	
+		document.getElementById('home-high').style.backgroundColor='#B71C1C';
+	</script>
+<%}%>
+
+<% include partials/footer %>

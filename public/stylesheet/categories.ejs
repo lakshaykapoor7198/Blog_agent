@@ -1,0 +1,30 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+<br><br><br><br>
+<br>
+
+
+<div class='form'>
+	<form method='post' action='/posts/add' enctype='multipart/form-data'>
+		<ul>
+		<%if(errors1!=undefined){%>
+			<%errors1.forEach(function(error){%>
+			<li>
+				<%=error.msg%>
+			</li>
+			<%});%>
+		<%}%>
+		</ul>
+		<label>Title</label><br>
+		<input type='text'  name='title' placeHolder='Title Here...'><br><br>
+		<input type='submit' class='submit' name='submit'><br><br>
+	</form>
+</div>
+
+<%if (title=='Category'){%>
+	<script type="text/javascript">
+		document.getElementById('cat-high').style.backgroundColor='#B71C1C';
+	</script>
+<%}%>
+<% include partials/footer %>

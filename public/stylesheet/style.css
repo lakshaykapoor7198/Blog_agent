@@ -1,0 +1,153 @@
+body{
+	background-color: #EF5350;
+}
+
+
+.nav-ul{
+	position: fixed;
+	width: 100%;
+	overflow: hidden;
+	padding:0;
+	margin: 0;
+	list-style-type: none;
+	overflow: hidden;
+	background-color: #D32F2F;
+	z-index: 100;
+}
+
+.nav-ul li{
+	padding:10px 20px 15px 20px;
+	font-size: 45px;
+	float: left;
+	font-family: Arial;
+	background-color: inherit;
+	color: white;
+}		
+
+.nav-ul li:hover{
+	background-color: #C62828;
+}
+
+.nav-ul li a{
+	padding:10px 20px 15px 20px;
+	text-decoration: none;
+	background-color: inherit;
+	color: inherit;
+}
+
+
+.footer{
+	width: 100%;
+	text-align: center;
+	color: white;
+	vertical-align: middle;
+	font-size: 25px;
+	background-color: #880E4F;
+}
+
+.footer div{
+	padding: 20px 0px 20px 0px;
+}
+
+h1{
+	font-size: 40px;
+	color: #263238
+;
+}
+
+.posts p,.posts div{
+	font-size: 18px;
+	color: white;
+}
+
+.posts div i{
+	color:#880E4F;
+}
+
+.posts{
+	color: white;
+	font-size: 13px;
+	background-color: #F44336;
+	margin: 40px auto 30px auto;
+	width:800px;
+	border-radius: 4px;
+	padding: 15px;
+	padding-top: 5px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);	
+	transition:all 1.5s;
+	text-align: center;
+}
+
+.posts:hover{
+	box-shadow:0px 0px 0px #888888;
+	width:810px;
+	transform:rotateZ(0deg);
+}
+
+.post-title{
+	text-decoration: none;
+	color: inherit;
+	background-color: inherit;
+}
+
+.more{
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+	font-size: 18px;
+	color: white;
+	background-color: #880E4F;
+	border-radius: 6px;
+	transition:1.5s all;
+}
+
+.more:hover{
+	box-shadow: 2px 2px 1px 0px rgba(0,0,0,0.75);	
+}
+
+.form{
+	text-align: center;
+	background-color: #F44336;
+	margin:50px auto 40px; auto;
+	padding: 20px;
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	color:white;
+	font-size: 32px;
+	font-family: arial;
+	width: 1000px;
+}
+
+input,textarea,select{
+	padding: 10px;
+	background-color: inherit;
+	color: white;
+	font-size: 26px;
+	width:80%;
+	border-radius: 6px;
+	outline:0;
+	border: 2px solid #880E4F;
+}
+
+option{
+	background-color: #880E4F;
+	border-radius: 6px;
+}
+
+::-webkit-input-placeholder{
+	color:white;
+}
+
+
+.submit{
+	background-color: #880E4F;
+	width:200px;
+}
+
+.submit:hover{
+	background-color: #691A99;
+}
+
+.post-image{
+	width:95%;
+	border-radius: 8px;	
+}

@@ -1,0 +1,46 @@
+<% include partials/header %>
+<% include partials/navbar %>
+
+<br><br><br><br>
+<br>
+
+
+<div class='form'>
+	<form method='post' action='/posts/add' enctype='multipart/form-data'>
+		<ul>
+		<%if(errors!=undefined){%>
+			<%errors.forEach(function(error){%>
+			<li>
+				<%=error.msg%>
+			</li>
+			<%});%>
+		<%}%>
+		</ul>
+		<label>Title</label><br>
+		<input type='text'  name='title' placeHolder='Title Here...'><br><br>
+		<label>Category</label><br>
+		<select name='category'>
+			<%posts.forEach(function(post){%>
+				<option value=<%=post%>><%=post%></option>
+			<%});%>
+		</select><br><br>
+		<label>Body</label><br>
+		<textarea name='body' id='body'></textarea><br><br>
+		<label>Image</label><br>
+		<input type='file' name='mainimage'><br><br>
+		<label>Author</label><br>
+		<input type='text' name='author'><br><br>
+		<input type='submit' class='submit' name='submit'><br><br>
+	</form>
+</div>
+
+<%if (title=='Post'){%>
+	<script type="text/javascript">
+		document.getElementById('post-high').style.backgroundColor='#B71C1C';
+	</script>
+<%}%>
+<script src='/ckeditor/ckeditor.js'></script>
+<script type="text/javascript">
+	CKEDITOR.replace('body');
+</script>
+<% include partials/footer %>
