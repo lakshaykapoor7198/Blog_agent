@@ -38,7 +38,7 @@ require("appdynamics").profile({
 	accountAccessKey: 'e916e279-963c-42cd-adb9-66d62c2eec26',
 	applicationName: 'Blog-Test',
 	tierName: 'Tier1',
-	nodeName: 'process-heroku' // The controller will automatically append the node name with a unique number
+	nodeName: 'process' // The controller will automatically append the node name with a unique number
    });
    
 app.use(expressValidator({
