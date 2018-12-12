@@ -31,6 +31,16 @@ app.use(function(req,res,next){
 	next();
 });
 
+require("appdynamics").profile({
+	controllerHostName: 'pdx-s-con-btd.saas.appdynamics.com',
+	controllerPort: 80, 
+	  accountName: 'customer2',
+	accountAccessKey: 'e916e279-963c-42cd-adb9-66d62c2eec26',
+	applicationName: 'Blog-Test',
+	tierName: 'Tier1',
+	nodeName: 'process-heroku' // The controller will automatically append the node name with a unique number
+   });
+   
 app.use(expressValidator({
   errorFormatter: function(param, msg, value) {
       var namespace = param.split('.')
